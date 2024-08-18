@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { FaBars, FaBell, FaSearch, FaUserCircle } from 'react-icons/fa'
 
 const Sellernavbar = ({ sidebarToggle, setSidebarToggle }) => {
