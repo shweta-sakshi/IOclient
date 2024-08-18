@@ -340,13 +340,13 @@ const Seller = () => {
             </div>
             <p className="text-center mt-4">
               Already have an account?
-              <a
-                href="/sellerloginform"
+              <Link
+                to="/sellerloginform"
                 className="text-blue-500 hover:underline"
               >
                 {" "}
                 Sign in
-              </a>
+              </Link>
             </p>
           </div>
         </form>

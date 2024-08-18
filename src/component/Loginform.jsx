@@ -121,12 +121,12 @@ export default function Loginform() {
         </div>
 
         {/* This is the link for the forgot password. */}
-        <a
-          href="#"
+        <Link
+          to="#"
           className="block text-blue-500 text-center mb-4 hover:underline"
         >
           Forgot Password?
-        </a>
+        </Link>
 
         {/* This is the button for the login. */}
         <button

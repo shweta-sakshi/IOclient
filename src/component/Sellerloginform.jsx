@@ -123,12 +123,12 @@ const Sellerloginform = () => {
           <input type="checkbox" className="mr-2 hover:cursor-pointer" />
           <span>Remember me</span>
         </div>
-        <a
-          href="#"
+        <Link
+          to="#"
           className="block text-blue-500 text-center mb-4 hover:underline"
         >
           Forgot Password?
-        </a>
+        </Link>
         <button
           type="submit"
           onClick={loginSeller}

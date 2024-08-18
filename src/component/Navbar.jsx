@@ -57,25 +57,25 @@ const Navbar = ({ sidebarToggle, setSidebarToggle }) => {
             <div className="bg-white text-black z-10 hidden absolute rounded-lg shadow w-32 group-focus:block top-full right-0">
               <ul className="py-2 text-sm">
                 <li>
-                  <a
-                    href="/userprofile"
+                  <Link
+                    to="/userprofile"
                     className="block px-4 py-2 hover:bg-gray-200"
                   >
                     <div>Profile</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/userprofile"
+                  <Link
+                    to="/userprofile"
                     className="block px-4 py-2 hover:bg-gray-200"
                   >
                     <div>Settings</div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/" className="block px-4 py-2 hover:bg-gray-200">
+                  <Link to="/" className="block px-4 py-2 hover:bg-gray-200">
                     <div>Log Out</div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
