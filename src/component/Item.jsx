@@ -12,7 +12,7 @@ function Item({ item }) {
     const productIndex = card.findIndex(items => items._id === pid);
     const token = localStorage.getItem("usersdatatoken");
 
-    axios.post('/api/removefromcart', { product: card[productIndex] }, {
+    axios.post('https://ioserver.onrender.com/api/removefromcart', { product: card[productIndex] }, {
       headers: {
         "Content-Type": "application/json",
         authorization: token

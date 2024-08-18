@@ -11,7 +11,7 @@ const Selleractivationpage = () => {
     if (activation_token) {
       const sendSellerActivationToken = async () => {
         try {
-          const res = await axios.post("/api/seller/activation", {
+          const res = await axios.post("https://ioserver.onrender.com/api/seller/activation", {
             activation_token,
           });
           console.log(res.data.message);

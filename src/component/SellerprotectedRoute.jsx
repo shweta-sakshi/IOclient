@@ -8,7 +8,7 @@ const SellerprotectedRoute = (props) => {
     const ValidSellerDashboard = async () => {
         let token = localStorage.getItem("sellersdatatoken")
         //calling API
-        const res = await fetch("/api/validseller", {
+        const res = await fetch("https://ioserver.onrender.com/api/validseller", {
             method: "GET",
             headers:
             {

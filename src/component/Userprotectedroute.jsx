@@ -8,7 +8,7 @@ const Userprotectedroute = (props) => {
     const validUserDashboard = async () => {
         let token = localStorage.getItem("usersdatatoken");
 
-        const res = await fetch("/api/validuser", {
+        const res = await fetch("https://ioserver.onrender.com/api/validuser", {
             method: "GET",
             headers:
             {

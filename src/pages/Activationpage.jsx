@@ -11,7 +11,7 @@ const Activationpage = () => {
     if (activation_token) {
       const activationEmail = async () => {
         try {
-          const res = await axios.post("/api/activation", {
+          const res = await axios.post("https://ioserver.onrender.com/api/activation", {
             activation_token,
           });
           console.log(res.data.message);

@@ -134,7 +134,7 @@ const Seller = () => {
           formData.append("address", address);
           formData.append("gstin", gstin);
           console.log(formData);
-          axios.post("/api/seller-SignUp",
+          axios.post("https://ioserver.onrender.com/api/seller-SignUp",
             formData, {
             headers: {
               "Content-Type": "multipart/form-data"

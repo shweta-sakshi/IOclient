@@ -14,7 +14,7 @@ const Sellerdashboard = () => {
 
     useEffect(() => {
         axios
-            .get("/api/get-all-products-shop/:id", {
+            .get("https://ioserver.onrender.com/api/get-all-products-shop/:id", {
                 headers: {
                     "Content-Type": "application/json",
                 },

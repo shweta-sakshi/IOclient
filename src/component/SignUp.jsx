@@ -91,7 +91,7 @@ const SignUp = () => {
       formData.append("file", file);
       formData.append("password", password);
       formData.append("cpassword", cpassword);
-      const res = await axios.post("/api/register", formData, {
+      const res = await axios.post("https://ioserver.onrender.com/api/register", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         },

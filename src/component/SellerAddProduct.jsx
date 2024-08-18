@@ -75,7 +75,7 @@ const SellerAddProduct = () => {
       //getting value of token as createPost require authentication.
       let token = localStorage.getItem("sellersdatatoken");
 
-      const productData = await fetch("/api/create-product", {
+      const productData = await fetch("https://ioserver.onrender.com/api/create-product", {
         method: "POST",
         headers: {
           "authorization": token

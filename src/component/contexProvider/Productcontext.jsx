@@ -12,7 +12,7 @@ const Productcontext = ({ children }) => {
     // Fetching all products
     useEffect(() => {
         axios
-            .get("/api/get-all-products", {
+            .get("https://ioserver.onrender.com/api/get-all-products", {
                 headers: {
                     "Content-Type": "application/json",
                 },

@@ -11,7 +11,7 @@ const Cartcontext = ({ children }) => {
     // Fetching all products in cart of user.
     useEffect(() => {
         let token = localStorage.getItem("usersdatatoken");
-        axios.get('/api/getitemsfromcart', {
+        axios.get('https://ioserver.onrender.com/api/getitemsfromcart', {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": token

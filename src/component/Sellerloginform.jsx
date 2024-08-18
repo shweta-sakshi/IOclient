@@ -56,7 +56,7 @@ const Sellerloginform = () => {
     } else {
 
       //user credential will be check with database.
-      axios.post("/api/seller-SignIn",
+      axios.post("https://ioserver.onrender.com/api/seller-SignIn",
         {
           email: email,
           password: password

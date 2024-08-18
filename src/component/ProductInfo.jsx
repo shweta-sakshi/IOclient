@@ -35,7 +35,7 @@ const ProductInfo = () => {
   const handleAddToCart = () => {
     productInformation.number = quantity;
     let token = localStorage.getItem("usersdatatoken");
-    axios.post('/api/addtocart', {
+    axios.post('https://ioserver.onrender.com/api/addtocart', {
       product: productInformation
     }, {
       headers: {
