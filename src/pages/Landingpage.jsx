@@ -16,7 +16,7 @@ const LandingPage = () => {
             to="/sellersignupform"
             className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold sm:p-2 p-1 rounded hover:shadow-md"
           >
-            Account
+            Business Account
           </Link>
           <Link
             to="/login"

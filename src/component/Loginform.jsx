@@ -45,7 +45,7 @@ export default function Loginform() {
       //user credential will be check with database.
       axios
         .post(
-          "/api/login",
+          "https://ioserver.onrender.com/api/login",
           {
             email: email,
             password: password,
@@ -64,6 +64,7 @@ export default function Loginform() {
           setInpval({ ...inpval, email: "", password: "" });
         })
         .catch((error) => {
+          console.log("while login :" + res);
           console.log(error);
           toast.error("Invalid Credential", {
             position: "top-center",
