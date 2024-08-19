@@ -23,7 +23,7 @@ import Paymentsucceed from "./component/Paymentsucceed.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/myapp">
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="/login" element={<Loginform />} />
