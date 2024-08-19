@@ -21,7 +21,7 @@ function Bill({ items }) {
   const handlePayment = async () => {
     try {
       const token = localStorage.getItem('usersdatatoken');
-      const response = await fetch('/api/payment', {
+      const response = await fetch('https://ioserver.onrender.com/api/payment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
