@@ -3,11 +3,7 @@ import BillTotal from "./BillTotal";
 import BillItems from "./BillItem";
 import { loadStripe } from '@stripe/stripe-js';
 
-async function initializeStripe() {
-  const stripePromise = await loadStripe("your-public-key-here");
-  // Other code that depends on stripePromise can go here
-}
-initializeStripe();
+const stripePromise = await loadStripe("strip-public-key");
 
 function Bill({ items }) {
 
@@ -39,6 +35,7 @@ function Bill({ items }) {
       const { id } = await response.json();
       const stripe = await stripePromise;
       const result = await stripe.redirectToCheckout({ sessionId: id });
+      console.log(result);
 
       if (result.error) {
         console.error(result.error.message);
