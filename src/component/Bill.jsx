@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BillTotal from "./BillTotal";
 import BillItems from "./BillItem";
 import { loadStripe } from '@stripe/stripe-js';
