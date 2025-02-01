@@ -8,5 +8,8 @@ export default defineConfig({
       '/api': 'https://ioserver.onrender.com',
     },
   },
+  define: {
+    'process.env.VITE_STRIPE_PUBLIC_KEY': JSON.stringify(process.env.VITE_STRIPE_PUBLIC_KEY),
+  },
   plugins: [react()],
 })
