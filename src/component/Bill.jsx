@@ -3,7 +3,12 @@ import BillTotal from "./BillTotal";
 import BillItems from "./BillItem";
 import { loadStripe } from '@stripe/stripe-js';
 
-const stripePromise = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const [stripe, setStripe] = useState(null);
+
+const initializeStripe = async () => {
+  const stripeInstance = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+  setStripe(stripeInstance);
+};
 
 function Bill({ items }) {
 
@@ -33,7 +38,7 @@ function Bill({ items }) {
       });
 
       const { id } = await response.json();
-      const stripe = await stripePromise;
+      initializeStripe();
       const result = await stripe.redirectToCheckout({ sessionId: id });
       console.log(result);
 
