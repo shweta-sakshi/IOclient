@@ -37,7 +37,11 @@ function Bill({ items }) {
       });
 
       const { id } = await response.json();
-      initializeStripe();
+      await initializeStripe();
+      if (!stripe) {
+        console.error("Stripe is not initialized.");
+        return;
+      }
       const result = await stripe.redirectToCheckout({ sessionId: id });
       console.log(result);
 
