@@ -3,14 +3,13 @@ import BillTotal from "./BillTotal";
 import BillItems from "./BillItem";
 import { loadStripe } from '@stripe/stripe-js';
 
-const [stripe, setStripe] = useState(null);
-
-const initializeStripe = async () => {
-  const stripeInstance = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
-  setStripe(stripeInstance);
-};
-
 function Bill({ items }) {
+  const [stripe, setStripe] = useState(null);
+
+  const initializeStripe = async () => {
+    const stripeInstance = await loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+    setStripe(stripeInstance);
+  };
 
   // This will filter out the items that are not in the cart.
   const requiredItems = items.filter((item) => item.number > 0);
